@@ -76,4 +76,4 @@ func _process(delta):
 	min_value = 0
 	max_value = total_hp
 	value = hp
-	hp = clamp(hp,0,total_hp)
+	hp = clamp(hp-1,0,total_hp)
