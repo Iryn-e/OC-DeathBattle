@@ -25,4 +25,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	print(velocity)
+func _input(event):
+	if event is InputEventKey and event.is_pressed():
+		if event.keycode==KEY_SHIFT:
+			get_child(0).texture=load("res://assets/characters/this.png")
