@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://clnk1q5mnhell"]
+[gd_scene load_steps=5 format=3 uid="uid://clnk1q5mnhell"]
 
 [ext_resource type="PackedScene" uid="uid://biyi7oj162d7m" path="res://scenes/Player.tscn" id="1_sb81j"]
+[ext_resource type="Script" path="res://scenes/Platform7.gd" id="2_t37cx"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_56fwt"]
 size = Vector2(1000, 100)
@@ -25,7 +26,7 @@ position = Vector2(553, 468)
 shape = SubResource("RectangleShape2D_qgdhn")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(1030, -125)
+position = Vector2(959, 3)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
 modulate = Color(0.201527, 0.201527, 0.201527, 1)
@@ -34,4 +35,72 @@ mesh = SubResource("QuadMesh_56fwt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
 position = Vector2(553, 468)
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Car7002" type="Node2D" parent="."]
+
+[node name="Platform3" type="StaticBody2D" parent="Car7002"]
+position = Vector2(568, -420)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform3"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform3"]
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Platform4" type="StaticBody2D" parent="Car7002"]
+position = Vector2(2931, -0.999996)
+rotation = -1.53976
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform4"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform4"]
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Platform7" type="StaticBody2D" parent="Car7002"]
+position = Vector2(1977, -927)
+rotation = -1.53976
+script = ExtResource("2_t37cx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform7"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform7"]
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Platform5" type="StaticBody2D" parent="Car7002"]
+position = Vector2(105, 9)
+rotation = -1.57465
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform5"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform5"]
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Platform8" type="StaticBody2D" parent="Car7002"]
+position = Vector2(2952, -897)
+rotation = -1.57465
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform8"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform8"]
+shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="Platform6" type="StaticBody2D" parent="Car7002"]
+position = Vector2(2437, 471)
+rotation = -0.048631
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform6"]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+mesh = SubResource("QuadMesh_56fwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform6"]
 shape = SubResource("RectangleShape2D_qgdhn")

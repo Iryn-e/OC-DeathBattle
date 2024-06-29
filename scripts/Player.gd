@@ -26,6 +26,9 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input(event):
-	if event is InputEventKey and event.is_pressed():
+	if event is InputEventKey:
 		if event.keycode==KEY_SHIFT:
-			get_child(0).texture=load("res://assets/characters/this.png")
+			if event.is_pressed():
+				get_child(0).texture=load("res://assets/characters/this.png")
+			else:
+				get_child(0).texture=load("res://assets/characters/sol.png")
