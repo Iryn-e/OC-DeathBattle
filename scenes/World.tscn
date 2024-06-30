@@ -61,7 +61,7 @@ mesh = SubResource("QuadMesh_56fwt")
 shape = SubResource("RectangleShape2D_qgdhn")
 
 [node name="Platform7" type="StaticBody2D" parent="Car7002"]
-position = Vector2(1977, -927)
+position = Vector2(1190, 194)
 rotation = -1.53976
 script = ExtResource("2_t37cx")
 

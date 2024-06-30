@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://canl6kyxavpks"]
+
+[ext_resource type="Script" path="res://scripts/Health.gd" id="1_qg8sf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qg8sf")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+color = Color(0.839216, 0.133333, 0.168627, 1)
+
+[node name="Foreground" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 50.0
+color = Color(0.117647, 0.666667, 0.278431, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background"]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 50.0
+text = "50"
