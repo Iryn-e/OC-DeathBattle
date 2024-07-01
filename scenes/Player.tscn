@@ -1,10 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://biyi7oj162d7m"]
+[gd_scene load_steps=8 format=3 uid="uid://biyi7oj162d7m"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_hc87l"]
 [ext_resource type="Texture2D" uid="uid://b3c3tyh6pfpfk" path="res://assets/characters/sol.png" id="2_0nwha"]
 [ext_resource type="PackedScene" uid="uid://canl6kyxavpks" path="res://scenes/CarHealth.tscn" id="3_cmw6p"]
+[ext_resource type="Script" path="res://scripts/Hitter.gd" id="4_kp6b1"]
+[ext_resource type="Texture2D" uid="uid://cctlo0ainlomw" path="res://assets/HealthBarIcon.png" id="5_1wjre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1y40"]
+size = Vector2(7.02404, 5.17562)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_hc87l")
@@ -27,3 +32,17 @@ offset_left = -103.0
 offset_top = -191.0
 offset_right = -103.0
 offset_bottom = -191.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(67.37, -80)
+rotation = -3.14159
+scale = Vector2(8.15201, -6.63297)
+script = ExtResource("4_kp6b1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_e1y40")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D2"]
+scale = Vector2(0.340209, 0.423348)
+texture = ExtResource("5_1wjre")

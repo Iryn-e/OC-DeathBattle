@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqd7eyskgnnhq"]
+
+[ext_resource type="Texture2D" uid="uid://cvguhejnlb4bo" path="res://assets/Punch.jpg" id="1_kb6kk"]
+[ext_resource type="Script" path="res://scripts/punch_bag.gd" id="1_wussb"]
+[ext_resource type="PackedScene" uid="uid://canl6kyxavpks" path="res://scenes/CarHealth.tscn" id="3_fgi0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icfai"]
+size = Vector2(638, 477)
+
+[node name="PunchBag" type="CharacterBody2D"]
+position = Vector2(1, 0)
+scale = Vector2(0.220996, 0.23238)
+script = ExtResource("1_wussb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kb6kk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_icfai")
+
+[node name="Control" parent="." instance=ExtResource("3_fgi0b")]
+offset_left = -343.898
+offset_top = -404.51
+offset_right = -343.898
+offset_bottom = -404.51
+scale = Vector2(3.42288, 3.27014)

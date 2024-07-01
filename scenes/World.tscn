@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://clnk1q5mnhell"]
+[gd_scene load_steps=6 format=3 uid="uid://clnk1q5mnhell"]
 
 [ext_resource type="PackedScene" uid="uid://biyi7oj162d7m" path="res://scenes/Player.tscn" id="1_sb81j"]
 [ext_resource type="Script" path="res://scenes/Platform7.gd" id="2_t37cx"]
+[ext_resource type="PackedScene" uid="uid://dqd7eyskgnnhq" path="res://scenes/punch_bag.tscn" id="3_2g0x0"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_56fwt"]
 size = Vector2(1000, 100)
@@ -50,7 +51,7 @@ mesh = SubResource("QuadMesh_56fwt")
 shape = SubResource("RectangleShape2D_qgdhn")
 
 [node name="Platform4" type="StaticBody2D" parent="Car7002"]
-position = Vector2(2931, -0.999996)
+position = Vector2(1490, 47)
 rotation = -1.53976
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Car7002/Platform4"]
@@ -61,7 +62,7 @@ mesh = SubResource("QuadMesh_56fwt")
 shape = SubResource("RectangleShape2D_qgdhn")
 
 [node name="Platform7" type="StaticBody2D" parent="Car7002"]
-position = Vector2(1190, 194)
+position = Vector2(236, -142)
 rotation = -1.53976
 script = ExtResource("2_t37cx")
 
@@ -104,3 +105,6 @@ mesh = SubResource("QuadMesh_56fwt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car7002/Platform6"]
 shape = SubResource("RectangleShape2D_qgdhn")
+
+[node name="PunchBag" parent="." instance=ExtResource("3_2g0x0")]
+position = Vector2(800, 314)
