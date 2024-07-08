@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://biyi7oj162d7m"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_hc87l"]
-[ext_resource type="Texture2D" uid="uid://b3c3tyh6pfpfk" path="res://assets/characters/sol.png" id="2_0nwha"]
+[ext_resource type="Texture2D" uid="uid://bcf1itfye8arr" path="res://assets/sol-anim/f1 - Copy.png" id="2_fp7xw"]
 [ext_resource type="PackedScene" uid="uid://canl6kyxavpks" path="res://scenes/CarHealth.tscn" id="3_cmw6p"]
 [ext_resource type="Script" path="res://scripts/Hitter.gd" id="4_kp6b1"]
 [ext_resource type="Texture2D" uid="uid://cctlo0ainlomw" path="res://assets/HealthBarIcon.png" id="5_1wjre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghm1"]
+size = Vector2(50.3333, 31.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1y40"]
 size = Vector2(7.02404, 5.17562)
@@ -15,12 +16,12 @@ size = Vector2(7.02404, 5.17562)
 script = ExtResource("1_hc87l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
-scale = Vector2(0.5, 1)
-texture = ExtResource("2_0nwha")
+position = Vector2(2, -63)
+scale = Vector2(0.408, 0.5)
+texture = ExtResource("2_fp7xw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -60)
+position = Vector2(2.5, -63)
 scale = Vector2(3, 6)
 shape = SubResource("RectangleShape2D_fghm1")
 
@@ -28,13 +29,14 @@ shape = SubResource("RectangleShape2D_fghm1")
 position = Vector2(0, -128)
 
 [node name="Control" parent="." instance=ExtResource("3_cmw6p")]
+visible = false
 offset_left = -103.0
 offset_top = -191.0
 offset_right = -103.0
 offset_bottom = -191.0
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(67.37, -80)
+position = Vector2(121, -70)
 rotation = -3.14159
 scale = Vector2(8.15201, -6.63297)
 script = ExtResource("4_kp6b1")
