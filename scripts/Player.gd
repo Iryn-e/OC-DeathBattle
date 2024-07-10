@@ -74,17 +74,22 @@ func init_regex(pattren):
 	return r
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
+var debounce=false
 func on_shift_press():
 	var overlap=get_child(4).get_overlapping_bodies()
 	var First_child = get_index_of(overlap,0)
 	#FindFirstChild('PunchBag',get_child(4).get_overlapping_bodies())
 	if First_child!= null and ('health' in First_child)and ('maxhealth' in First_child):
 		First_child.health-=5
+	if debounce:
+		return
+	debounce=true
 	for i in range(6):
 		var ii=i+1
 		get_child(0).texture=load("res://assets/sol-anim/f" + str(ii) + ".png")
 		await wait(0.1)
 	get_child(0).texture=load("res://assets/sol-anim/f" + str(1) + ".png")
+	debounce=false
 func _input(event):
 	if event is InputEventKey:
 		if event.keycode==KEY_SHIFT:
