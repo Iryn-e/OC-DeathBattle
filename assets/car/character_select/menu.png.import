@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsbc6lqt6hqyw"
-path="res://.godot/imported/start-btn.png-e17ab66f2b9606e1f3f72653300e7afe.ctex"
+uid="uid://d2yn7e0wrhocj"
+path="res://.godot/imported/menu.png-c415bbd23581f3e0a54de25aec7916e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/car/start-btn.png"
-dest_files=["res://.godot/imported/start-btn.png-e17ab66f2b9606e1f3f72653300e7afe.ctex"]
+source_file="res://assets/car/character_select/menu.png"
+dest_files=["res://.godot/imported/menu.png-c415bbd23581f3e0a54de25aec7916e8.ctex"]
 
 [params]
 

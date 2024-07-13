@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bryjbp70qus6p"]
+[gd_scene load_steps=6 format=3 uid="uid://bryjbp70qus6p"]
 
 [ext_resource type="Texture2D" uid="uid://by2jdinlbvq25" path="res://assets/car/basic-wagen-tall.jpg.png" id="1_yedvr"]
-[ext_resource type="Texture2D" uid="uid://dflj3m4qvehj5" path="res://assets/car/start-btn.png" id="2_0l5vs"]
+[ext_resource type="Texture2D" uid="uid://m88xqlf2ktmr" path="res://assets/car/btn/Start_Button.png" id="2_qopuk"]
 [ext_resource type="Script" path="res://scripts/Start.gd" id="2_x0axq"]
+[ext_resource type="Texture2D" uid="uid://dbbietirlpya4" path="res://assets/car/btn/Start_Button-Pressed.png" id="3_2dla3"]
+[ext_resource type="Texture2D" uid="uid://c4qngvpj6t2qk" path="res://assets/car/btn/Start_Button-Hover.png" id="4_rrxub"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-42, 7)
@@ -13,9 +15,12 @@ scale = Vector2(0.920977, 0.836578)
 texture = ExtResource("1_yedvr")
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 437.0
-offset_top = 394.0
-offset_right = 737.0
-offset_bottom = 544.0
-texture_normal = ExtResource("2_0l5vs")
+offset_left = 464.0
+offset_top = 449.0
+offset_right = 732.0
+offset_bottom = 527.0
+keep_pressed_outside = true
+texture_normal = ExtResource("2_qopuk")
+texture_pressed = ExtResource("3_2dla3")
+texture_hover = ExtResource("4_rrxub")
 script = ExtResource("2_x0axq")
