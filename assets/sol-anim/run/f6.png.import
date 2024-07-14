@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dil6o6uthgute"
-path="res://.godot/imported/f2.png-34e1b6699dd6b197c09550cbdb36d92f.ctex"
+uid="uid://bp8ybhxl0duhn"
+path="res://.godot/imported/f6.png-120c561456720976e0862c9e9c26de5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sol-anim/f2.png"
-dest_files=["res://.godot/imported/f2.png-34e1b6699dd6b197c09550cbdb36d92f.ctex"]
+source_file="res://assets/sol-anim/run/f6.png"
+dest_files=["res://.godot/imported/f6.png-120c561456720976e0862c9e9c26de5e.ctex"]
 
 [params]
 

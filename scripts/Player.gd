@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 @export var maxhealth:float=100;# make some logic to set the max health to the character's health. for now use 100
 @export var health:float=maxhealth;
-@onready var animations = $AnimationPlayer
+@onready var animation = $AnimationPlayer
 @onready var player_sprite = $Sprite2D
 
 @export var SPEED = 300.0
 @export var GRAVITY = 30
 @export var JUMP_VELOCITY = 800.0
 
+var animation_to_play=""
 var debounce=false
 var face_direction=0
 
@@ -87,21 +88,19 @@ func on_shift_press():
 	#FindFirstChild('PunchBag',get_child(4).get_overlapping_bodies())
 	if First_child!= null and ('health' in First_child)and ('maxhealth' in First_child):
 		First_child.health-=5
-	if debounce:
-		return
-	debounce=true
-	for i in range(6):
-		var ii=i+1
-		get_child(0).texture=load("res://assets/sol-anim/f" + str(ii) + ".png")
-		await wait(0.1)
-	get_child(0).texture=load("res://assets/sol-anim/f" + str(1) + ".png")
-	debounce=false
+
+	debounce = true
+	animation_to_play = "sol_punch_1"
+	await wait(0.8)
+	animation_to_play = "sol_idle"
+	debounce = false
 
 func updateAnimation(velocity):
 	# If going left, flip sprite (Assumes sprites always are right)
 	if velocity.x < 0: player_sprite.flip_h = true
 	elif velocity.x > 0: player_sprite.flip_h = false
-	animations.play("sol_idle")
+	print(animation_to_play)
+	animation.play(animation_to_play)
 
 func _input(event):
 	if event is InputEventKey:
@@ -110,4 +109,5 @@ func _input(event):
 				on_shift_press()
 
 func _ready():
+	animation_to_play = "sol_idle"
 	pass

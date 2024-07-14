@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lr5tgh75vvmm"
-path="res://.godot/imported/CHARSELECTIMG.png-bc1f83a24c246b686909eaf0b169229f.ctex"
+uid="uid://bpuvanomkycfp"
+path="res://.godot/imported/sol-punch-1.png-08286961f229569db6fe221feee4ce87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/charselect/CHARSELECTIMG.png"
-dest_files=["res://.godot/imported/CHARSELECTIMG.png-bc1f83a24c246b686909eaf0b169229f.ctex"]
+source_file="res://assets/sol-anim/punch-1/sol-punch-1.png"
+dest_files=["res://.godot/imported/sol-punch-1.png-08286961f229569db6fe221feee4ce87.ctex"]
 
 [params]
 
