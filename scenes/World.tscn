@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://clnk1q5mnhell"]
+[gd_scene load_steps=6 format=3 uid="uid://clnk1q5mnhell"]
 
 [ext_resource type="PackedScene" uid="uid://biyi7oj162d7m" path="res://scenes/Player.tscn" id="1_sb81j"]
 [ext_resource type="PackedScene" uid="uid://dqd7eyskgnnhq" path="res://scenes/punch_bag.tscn" id="3_2g0x0"]
+[ext_resource type="Texture2D" uid="uid://c4ibfhjfctaw5" path="res://assets/car/arena1.jpg" id="3_qdxji"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_56fwt"]
 size = Vector2(1000, 100)
@@ -63,3 +64,9 @@ shape = SubResource("RectangleShape2D_qgdhn")
 
 [node name="PunchBag" parent="." instance=ExtResource("3_2g0x0")]
 position = Vector2(800, 314)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(680, 21)
+scale = Vector2(0.544922, 0.544922)
+texture = ExtResource("3_qdxji")
