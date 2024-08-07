@@ -36,7 +36,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = 0
-	
+	if position.y > 10000:
+		# kill the player here once that is implemented
+		position.y=237
+		position.x=60
 	move_and_slide()
 	updateAnimation(velocity)
 
@@ -100,7 +103,6 @@ func updateAnimation(velocity):
 	# If going left, flip sprite (Assumes sprites always are right)
 	if velocity.x < 0: player_sprite.flip_h = true
 	elif velocity.x > 0: player_sprite.flip_h = false
-	#print(animation_to_play)
 	animation.play(animation_to_play)
 
 func _input(event):

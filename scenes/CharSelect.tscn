@@ -18,10 +18,10 @@ offset_bottom = -265.0
 flat = true
 script = ExtResource("2_bunx6")
 
-[node name="SolButton2" type="Button" parent="Charselectimg"]
-offset_left = -666.524
-offset_top = -272.243
-offset_right = -105.524
-offset_bottom = 218.757
+[node name="platFormButton" type="Button" parent="Charselectimg"]
+offset_left = -40.0
+offset_top = -282.0
+offset_right = 350.0
+offset_bottom = 263.0
 flat = true
 script = ExtResource("2_bunx6")
