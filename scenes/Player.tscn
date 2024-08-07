@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bpuvanomkycfp" path="res://assets/sol-anim/punch-1/sol-punch-1.png" id="6_4gnk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghm1"]
-size = Vector2(20, 20.6667)
+size = Vector2(31, 38.8333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1y40"]
 size = Vector2(7.02404, 5.17562)
@@ -180,13 +180,12 @@ script = ExtResource("1_hc87l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, -63)
-scale = Vector2(0.408, 0.5)
 texture = ExtResource("2_t6305")
 hframes = 6
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, -66)
+position = Vector2(11.5, -62.5)
 scale = Vector2(3, 6)
 shape = SubResource("RectangleShape2D_fghm1")
 

@@ -32,6 +32,7 @@ func _physics_process(delta):
 	
 	if (direction):
 		face_direction=direction
+		get_child(4).position.x = 121 * direction
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = 0
@@ -99,7 +100,7 @@ func updateAnimation(velocity):
 	# If going left, flip sprite (Assumes sprites always are right)
 	if velocity.x < 0: player_sprite.flip_h = true
 	elif velocity.x > 0: player_sprite.flip_h = false
-	print(animation_to_play)
+	#print(animation_to_play)
 	animation.play(animation_to_play)
 
 func _input(event):
