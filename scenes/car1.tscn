@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://biyi7oj162d7m" path="res://scenes/Player.tscn" id="1_ilbxh"]
 [ext_resource type="Texture2D" uid="uid://by2jdinlbvq25" path="res://assets/car/basic-wagen-tall.jpg.png" id="1_nkxlr"]
+[ext_resource type="Texture2D" uid="uid://b3c3tyh6pfpfk" path="res://assets/characters/sol.png" id="2_rfs3j"]
 [ext_resource type="PackedScene" uid="uid://dqd7eyskgnnhq" path="res://scenes/punch_bag.tscn" id="3_a3kyt"]
-[ext_resource type="Script" path="res://scenes/car1/rotate-clockwise.gd" id="3_mkvig"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_8odfh"]
-size = Vector2(1000, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05fdv"]
 size = Vector2(998, 100)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8odfh"]
+size = Vector2(1000, 100)
 
 [node name="Car1" type="Node2D"]
 
@@ -17,6 +17,12 @@ size = Vector2(998, 100)
 position = Vector2(72, 108)
 scale = Vector2(0.935711, 0.84631)
 texture = ExtResource("1_nkxlr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(881, 13)
+rotation = 2.0209
+scale = Vector2(-3.28487, 3.24029)
+texture = ExtResource("2_rfs3j")
 
 [node name="Player" parent="." instance=ExtResource("1_ilbxh")]
 position = Vector2(60, 237)
@@ -26,10 +32,6 @@ position = Vector2(60, 237)
 [node name="Platform3" type="StaticBody2D" parent="Node2D"]
 position = Vector2(74, 344)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Platform3"]
-modulate = Color(0.201527, 0.201527, 0.201527, 1)
-mesh = SubResource("QuadMesh_8odfh")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Platform3"]
 shape = SubResource("RectangleShape2D_05fdv")
 
@@ -37,16 +39,12 @@ shape = SubResource("RectangleShape2D_05fdv")
 position = Vector2(-411, -110)
 rotation = -1.49401
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Platform4"]
-modulate = Color(0.201527, 0.201527, 0.201527, 1)
-mesh = SubResource("QuadMesh_8odfh")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Platform4"]
 shape = SubResource("RectangleShape2D_05fdv")
 
 [node name="Platform5" type="StaticBody2D" parent="Node2D"]
 position = Vector2(3792, 400)
-rotation = -3.79252
+rotation = -3.36032
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Platform5"]
 modulate = Color(0.201527, 0.201527, 0.201527, 1)
@@ -68,7 +66,7 @@ shape = SubResource("RectangleShape2D_05fdv")
 
 [node name="Platform8" type="StaticBody2D" parent="Node2D"]
 position = Vector2(2784, 377)
-rotation = -2.89341
+rotation = -3.34932
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Platform8"]
 modulate = Color(0.201527, 0.201527, 0.201527, 1)
@@ -78,9 +76,8 @@ mesh = SubResource("QuadMesh_8odfh")
 shape = SubResource("RectangleShape2D_05fdv")
 
 [node name="Platform6" type="StaticBody2D" parent="Node2D"]
-position = Vector2(899, 40)
-rotation = -3.90991
-script = ExtResource("3_mkvig")
+position = Vector2(919, 206)
+rotation = -3.52151
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Platform6"]
 modulate = Color(0.201527, 0.201527, 0.201527, 1)
@@ -90,5 +87,5 @@ mesh = SubResource("QuadMesh_8odfh")
 shape = SubResource("RectangleShape2D_05fdv")
 
 [node name="PunchBag" parent="Node2D" instance=ExtResource("3_a3kyt")]
-position = Vector2(329, 165)
-scale = Vector2(0.220996, 0.552381)
+position = Vector2(680, 147)
+scale = Vector2(0.366938, 0.279546)
