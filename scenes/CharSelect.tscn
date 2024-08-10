@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5vhiluxipdww"]
 
 [ext_resource type="Texture2D" uid="uid://d2yn7e0wrhocj" path="res://assets/car/character_select/menu.png" id="1_onusb"]
-[ext_resource type="Script" path="res://scripts/charselect.gd" id="2_bunx6"]
+[ext_resource type="Script" path="res://scripts/characterSelector.gd" id="2_xooa5"]
 
 [node name="CharSelect" type="Node2D"]
 
@@ -9,6 +9,7 @@
 position = Vector2(575, 332)
 scale = Vector2(0.426091, 0.42609)
 texture = ExtResource("1_onusb")
+script = ExtResource("2_xooa5")
 
 [node name="SolButton" type="Button" parent="Charselectimg"]
 offset_left = -1347.0
@@ -16,7 +17,6 @@ offset_top = -620.0
 offset_right = -669.0
 offset_bottom = -265.0
 flat = true
-script = ExtResource("2_bunx6")
 
 [node name="platFormButton" type="Button" parent="Charselectimg"]
 offset_left = -40.0
@@ -24,4 +24,3 @@ offset_top = -282.0
 offset_right = 350.0
 offset_bottom = 263.0
 flat = true
-script = ExtResource("2_bunx6")
