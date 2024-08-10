@@ -90,14 +90,17 @@ func on_shift_press():
 	var overlap=get_child(4).get_overlapping_bodies()
 	var First_child = get_index_of(overlap,0)
 	#FindFirstChild('PunchBag',get_child(4).get_overlapping_bodies())
-	if First_child!= null and ('health' in First_child)and ('maxhealth' in First_child):
-		First_child.health-=5
 
-	debounce = true
-	animation_to_play = "sol_punch_1"
-	await wait(0.8)
-	animation_to_play = "sol_idle"
-	debounce = false
+	if !debounce:
+		debounce = true
+		animation_to_play = "sol_punch_1"
+		
+		if First_child!= null and ('health' in First_child)and ('maxhealth' in First_child):
+			First_child.health-=5
+		await wait(0.8)
+		animation_to_play = "sol_idle"
+		debounce = false
+	pass
 
 func updateAnimation(velocity):
 	# If going left, flip sprite (Assumes sprites always are right)
